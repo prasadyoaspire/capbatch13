@@ -13,10 +13,10 @@ public class SaveProductMain {
 	public static void main(String[] args) {
 		
 		Product product = new Product();
-		product.setProductId(1001);
-		product.setProductName("NewBrandProduct");
-		product.setProductPrice(120000);
-		product.setCategory("laptop");
+		product.setProductId(40);
+		product.setProductName("IPhoneY");
+		product.setProductPrice(90000);
+		product.setCategory("mobile");
 		product.setCreatedDate(LocalDate.of(2022, 8, 25));
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA-PU");
@@ -26,7 +26,7 @@ public class SaveProductMain {
 		entityManager.getTransaction().begin();
 		
 		entityManager.persist(product);
-		System.out.println("Product saved");		
+		System.out.println("Product saved");
 		
 		entityManager.getTransaction().commit();
 		
